@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degchan’s Projects</title>
+    <link rel="favicon" href="assets/images/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Degchan’s Projects</h1>
+    </header>
+    <div class="container fade-in">
+        <main>
+            <section class="card-container">
+                <div class="card" onclick="openLessonsBIOS('BIOS')">
+                    <div class="card-header">
+                        <div class="title-row">
+                            <i class="fas fa-microchip main-icon"></i>
+                            <h2>BIOS прерывания <i class="fas lesson-icon"></i></h2>
+                        </div>                          
+                    </div>
+                    <div class="card-content">
+                        <p><i class="fas fa-info-circle icon-small"></i> Основные функции BIOS, которые надо знать для разработки ОС</p>
+                        <p><i class="fas fa-code icon-small"></i> Практические примеры кода на NASM (real mode)</p>
+                        <p><i class="fas fa-terminal icon-small"></i> А также как с ним можно взаимодействовать через стандартные функции BIOS`а.</p>
+                    </div>
+                </div>
+                
+                <div class="card" onclick="openLessons32('x32')">
+                    <div class="card-header">
+                        <div class="title-row">
+                            <i class="fas fa-cogs main-icon"></i>
+                            <h2>32-bit (protected mode) <i class="fas lesson-icon"></i></h2>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><i class="fas fa-graduation-cap icon-small"></i> Уроки по созданию операционных систем в режиме 32 bit (protected mode)</p>
+                        <p><i class="fas fa-thumbs-up icon-small"></i> Этот режим прост в освоении, однако дальнейшее развитие системы может оказаться затруднительным</p>
+                    </div>
+                </div>
+                
+                <div class="card" onclick="openLessons16('x16')">
+                    <div class="card-header">
+                        <div class="title-row">
+                            <i class="fas fa-cogs main-icon"></i>
+                            <h2>16-bit (real mode) <i class="fas lesson-icon"></i></h2>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><i class="fas fa-graduation-cap icon-small"></i> Уроки по созданию операционных систем в режиме 16 bit (real mode)</p>
+                        <p><i class="fas fa-bolt icon-small"></i> Максимальная производительность и компактность</p>
+                        <p><i class="fas fa-brain icon-small"></i> Подойдёт для опытных разработчиков ОС</p>
+                        <p><i class="fas fa-project-diagram icon-small"></i> Большой потенциал для развития системы</p>
+                    </div>
+                </div>
+                
+                <div class="card" onclick="openLessonsDISK('x16')">
+                    <div class="card-header">
+                        <div class="title-row">
+                            <i class="fas fa-hard-drive main-icon"></i>
+                            <h2>Работа с диском (real mode) <i class="fas lesson-icon"></i></h2>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><i class="fas fa-hdd icon-small"></i> В данной статье подробна описана работа с диском в реальном режиме</p>
+                        <p><i class="fas fa-microscope icon-small"></i> Мы разберёмся, как вообще работает диск</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openLessonsWSL('wsl')">
+                    <div class="card-header">
+                        <div class="title-row">
+                            <i class="fab fa-linux main-icon"></i>
+                            <h2>Установка и работа с WSL <i class="fas lesson-icon"></i></h2>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><i class="fas fa-download icon-small"></i> В этой статье я подробно расскажу как установить Linux подсистему.</p>
+                        <p><i class="fas fa-code icon-small"></i> Разберёмся, как запускать Linux-программы прямо в Windows.</p>
+                        <p><i class="fas fa-cogs icon-small"></i> Научимся работать с терминалом и устанавливать нужные инструменты для работы.</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openLessonsQEMU('qemu')">
+                    <div class="card-header">
+                        <div class="title-row">
+                            <i class="fas fa-server main-icon"></i>
+                            <h2>Установка и работа с Qemu <i class="fas lesson-icon"></i></h2>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p><i class="fas fa-download icon-small"></i> В данной статье я расскажу о том, как работать с Qemu.</p>
+                        <p><i class="fas fa-code icon-small"></i> Научимся запускать свои ОС проекты без необходимости делать загрузочные флешки.</p>
+                        <p><i class="fas fa-cogs icon-small"></i> Разберёмся с настройкой и опциями данного эмулятора.</p>
+                    </div>
+                </div>                
+
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function openLessonsBIOS(architecture) {
+            window.location.href = 'BIOS/interruptions.html';
+        }
+        function openLessons32(architecture) {
+            window.location.href = 'x32/lessons.html';
+        }
+        function openLessons16(architecture) {
+            window.location.href = 'x16/lessons.html';
+        }
+        function openLessonsDISK(architecture) {
+            window.location.href = 'BIOS/disk.html';
+        }
+        function openLessonsWSL(architecture) {
+            window.location.href = 'software/wsl.html';
+        }
+        function openLessonsQEMU(architecture) {
+            window.location.href = 'software/qemu.html';
+        }
+
+        // Анимация загрузки
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.querySelector('.container').classList.add('fade-in');
+            }, 100);
+        });
+    </script>
+</body>
+</html>
